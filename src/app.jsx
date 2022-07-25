@@ -1,7 +1,9 @@
+import HeaderTop from "./components/header-top/header-top.component";
+
 const App = () => {
   return (
     <div>
-      <h1>App</h1>
+      <HeaderTop />
     </div>
   );
 };
