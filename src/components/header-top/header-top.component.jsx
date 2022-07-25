@@ -3,7 +3,7 @@ const HeaderTop = () => {
   return (
     <div className="header-top">
       <div className="container">
-        <div className="d-md-flex">
+        <div className="d-md-flex justify-content-between align-items-center">
           <div className="d-flex">
             <select name="" id="" className="form-select">
               <option value="">Arabic</option>
