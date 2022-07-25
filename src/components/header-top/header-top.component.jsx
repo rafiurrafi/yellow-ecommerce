@@ -16,7 +16,7 @@ const HeaderTop = () => {
               <option value="">USD</option>
               <option value="">Dinar</option>
             </select>
-            <span>Call us at 81281233</span>
+            <div>Call us at 81281233</div>
           </div>
           <div>
             <strong>Free delivery on order over </strong>

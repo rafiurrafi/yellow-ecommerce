@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "assets/slider-1.jpg",
+    "subtitle": "Enjoy this offer today",
+    "title": ["New collection", "Sale 40%"]
+  },
+  {
+    "id": 2,
+    "imageUrl": "assets/slider-2.jpg",
+    "subtitle": "Enjoy this offer today",
+    "title": ["New collection", "Sale 30%"]
+  },
+  {
+    "id": 3,
+    "imageUrl": "assets/slider-3.jpg",
+    "subtitle": "Enjoy this offer today",
+    "title": ["New collection", "Sale 20%"]
+  },
+  {
+    "id": 4,
+    "imageUrl": "assets/slider-4.jpg",
+    "subtitle": "Enjoy this offer today",
+    "title": ["New collection", "Sale 45%"]
+  }
+]

@@ -1,0 +1,22 @@
+.slider {
+  height: 80vh;
+  position: relative;
+  display: none;
+  &.active {
+    display: block;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &-content {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    // h2 {
+    //   font-size: 4rem;
+    // }
+  }
+}
