@@ -4,6 +4,7 @@ import HeaderTop from "./components/header-top/header-top.component";
 import Header from "./components/header/header.component";
 import OfferEnding from "./components/offer-ending/offer-ending.component";
 import Slider from "./components/slider/slider.component";
+import Subscription from "./components/subscription/subscribe.component";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <FeaturedProducts />
       <DirectoryCard />
       <OfferEnding />
+      <Subscription />
     </div>
   );
 };
