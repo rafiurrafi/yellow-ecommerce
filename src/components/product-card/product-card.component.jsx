@@ -2,7 +2,6 @@ import { FiHeart } from "react-icons/fi";
 import "./product-card.style.scss";
 const ProductCard = ({ product }) => {
   const { name, images, price } = product;
-  console.log(product);
   return (
     <div className="product-card">
       <img src={images[0]} alt="" />
