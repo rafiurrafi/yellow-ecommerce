@@ -1,14 +1,16 @@
 import { FiHeart } from "react-icons/fi";
 import "./product-card.style.scss";
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
+  const { name, images, price } = product;
+  console.log(product);
   return (
     <div className="product-card">
-      <img src="assets/1.jpg" alt="" />
+      <img src={images[0]} alt="" />
       <div className="d-flex justify-content-between align-items-start my-3">
         <div>
-          <h4>Shirt 1</h4>
+          <h4>{name}</h4>
           <p>
-            $1000 - <span>$999</span>
+            ${price[0]} - <span>${price[1]}</span>
           </p>
         </div>
         <button>

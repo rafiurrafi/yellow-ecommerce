@@ -1,16 +1,34 @@
 import ProductCard from "../product-card/product-card.component";
-
+import PRODUCTS from "../../service/fakeProductService";
+import { useState } from "react";
 const FeaturedProducts = () => {
+  const [products, setProducts] = useState(PRODUCTS);
+  const [showCat, setShowTag] = useState("men");
+
+  const filteredProducts = products.filter(
+    (product) => product.tags[0] === showCat
+  );
+
   return (
     <div className="featured-products my-5">
       <h3 className="display-4  text-center">Featured products</h3>
       <div className="d-flex justify-content-center my-3">
-        <button className="btn me-4">Men</button>
-        <button className="btn">Women</button>
+        <button className="btn me-4" onClick={() => setShowTag("men")}>
+          Men
+        </button>
+        <button className="btn" onClick={() => setShowTag("women")}>
+          Women
+        </button>
       </div>
-      <div className="container">
-        <div>
-          <ProductCard />
+      <div className="container my-5">
+        <div className="row ">
+          {filteredProducts
+            .filter((_, id) => id < 4)
+            .map((product) => (
+              <div key={product.id} className="col-md-4 col-lg-3">
+                <ProductCard product={product} />
+              </div>
+            ))}
         </div>
       </div>
     </div>
