@@ -1,0 +1,17 @@
+.offer-ending {
+  img {
+    flex: 1;
+  }
+  .offer-ending-content {
+    flex: 0 0 40%;
+  }
+  .offer-time {
+    & > div {
+      font-weight: 400;
+      flex: 0 0 1;
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+}
