@@ -31,6 +31,9 @@ const FeaturedProducts = () => {
             ))}
         </div>
       </div>
+      <div className="text-center">
+        <button className="btn btn-secondary px-5 py-2">Discover more</button>
+      </div>
     </div>
   );
 };
