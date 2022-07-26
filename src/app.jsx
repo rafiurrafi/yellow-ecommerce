@@ -1,5 +1,6 @@
 import DirectoryCard from "./components/directory-card/directory-card.component.js/directory-card.component";
 import FeaturedProducts from "./components/featured-products/featured-products.component";
+import Footer from "./components/footer/footer.component";
 import HeaderTop from "./components/header-top/header-top.component";
 import Header from "./components/header/header.component";
 import OfferEnding from "./components/offer-ending/offer-ending.component";
@@ -16,6 +17,7 @@ const App = () => {
       <DirectoryCard />
       <OfferEnding />
       <Subscription />
+      <Footer />
     </div>
   );
 };
