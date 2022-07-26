@@ -1,3 +1,4 @@
+import FeaturedProducts from "./components/featured-products/featured-products.component";
 import HeaderTop from "./components/header-top/header-top.component";
 import Header from "./components/header/header.component";
 import Slider from "./components/slider/slider.component";
@@ -8,6 +9,7 @@ const App = () => {
       <HeaderTop />
       <Header />
       <Slider />
+      <FeaturedProducts />
     </div>
   );
 };
