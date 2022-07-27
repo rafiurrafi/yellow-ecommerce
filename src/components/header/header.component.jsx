@@ -2,6 +2,7 @@ import "./header.style.scss";
 import * as Fc from "react-icons/fc";
 import { BsFillPersonFill, BsSuitHeartFill } from "react-icons/bs";
 import { GiShoppingCart } from "react-icons/gi";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header py-4">
@@ -10,52 +11,52 @@ const Header = () => {
           <div className="logo h2">Logo</div>
           <ul className="list-unstyled d-flex mb-0">
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/shop"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Shop
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/collection"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Collection
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/pages"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Pages
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/blog"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="mx-3">
-              <a
-                href=""
+              <Link
+                to="/contact-us"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Contact us
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="side-nav">

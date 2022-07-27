@@ -1,0 +1,20 @@
+.search {
+  &-input-box {
+    border: 1px solid #d4d1d1;
+    input {
+      border: none;
+      flex: 0 0 80%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-icon {
+    flex: 1;
+    font-size: 1.4rem;
+    border-left: 1px solid #d4d1d1;
+    svg {
+      color: rgb(88, 85, 85);
+    }
+  }
+}
