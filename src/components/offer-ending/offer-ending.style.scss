@@ -1,6 +1,9 @@
 .offer-ending {
-  img {
+  .offer-img {
     flex: 1;
+    img {
+      width: 90%;
+    }
   }
   .offer-ending-content {
     flex: 0 0 40%;

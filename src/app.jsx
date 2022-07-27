@@ -1,24 +1,14 @@
-import DirectoryCard from "./components/directory-card/directory-card.component.js/directory-card.component";
-import FeaturedProducts from "./components/featured-products/featured-products.component";
-import Footer from "./components/footer/footer.component";
-import HeaderTop from "./components/header-top/header-top.component";
-import Header from "./components/header/header.component";
-import OfferEnding from "./components/offer-ending/offer-ending.component";
-import Slider from "./components/slider/slider.component";
-import Subscription from "./components/subscription/subscribe.component";
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/home/home.component";
+import Layout from "./routes/layout/layout.component";
 
 const App = () => {
   return (
-    <div>
-      <HeaderTop />
-      <Header />
-      <Slider />
-      <FeaturedProducts />
-      <DirectoryCard />
-      <OfferEnding />
-      <Subscription />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+      </Route>
+    </Routes>
   );
 };
 

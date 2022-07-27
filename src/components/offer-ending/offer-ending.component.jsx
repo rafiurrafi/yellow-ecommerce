@@ -27,8 +27,10 @@ const OfferEnding = () => {
   return (
     <div className="offer-ending my-5">
       <div className="container">
-        <div className="d-flex align-items-center">
-          <img src={Service.deal.image} alt="" className="me-5" />
+        <div className="d-md-flex align-items-center">
+          <div className="offer-img">
+            <img src={Service.deal.image} alt="" className="me-5" />
+          </div>{" "}
           <div className="offer-ending-content">
             <h4 className="display-4 text-center">Deal of the day</h4>
             <div className="offer-time d-flex justify-content-between text-center my-4">
