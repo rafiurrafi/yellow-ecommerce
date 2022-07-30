@@ -1,8 +1,10 @@
+import "./comment-item.style.scss";
 const CommentItem = ({ comment: { name, imageUrl, message } }) => {
+  console.log(name, imageUrl, message);
   return (
     <div className="comment-item">
       <div className="d-flex">
-        <div>
+        <div className="comment-img me-4">
           <img src={imageUrl} alt="" />
         </div>
         <div>

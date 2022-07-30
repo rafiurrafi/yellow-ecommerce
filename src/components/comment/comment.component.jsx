@@ -1,12 +1,11 @@
 import CommentItem from "../comment-item/comment-item.component";
-import image1 from "assets/profile/profile-1.jpg";
-import image2 from "assets/profile/profile-1.jpg";
+
 const comments = [
   {
     id: 1,
     name: "Haseeba",
     email: "haseeba@yahool.mail",
-    imgageUrl: image1,
+    imageUrl: "assets/profile/profile-1.jpg",
     message:
       "Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Suspendisse viverra ed viverra. Mauris ullarper euismod vehicula. Phasellus quam nisi, congue id nulla.",
     replies: [
@@ -14,7 +13,7 @@ const comments = [
         id: 1,
         name: "Sameeeya",
         email: "sameeya@yahool.mail",
-        imgageUrl: image2,
+        imageUrl: "assets/profile/profile-2.jpg",
         message:
           "Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Suspendisse viverra ed viverra. Mauris ullarper euismod vehicula. Phasellus quam nisi, congue id nulla.",
       },
