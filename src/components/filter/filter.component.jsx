@@ -1,37 +1,29 @@
 import { useState } from "react";
-
+import Service from "../../service/service";
 const Filter = () => {
   const [categoryFilter, setCategoryFilter] = useState([]);
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCategoryFilter(...categoryFilter, value);
+  const handleChange = (name) => {
+    if (!categoryFilter.includes(name)) categoryFilter.push(name);
+    else categoryFilter.splice(categoryFilter.indexOf(name), 1);
+    console.log(categoryFilter);
   };
-  console.log(categoryFilter);
+  const { categoryService } = Service;
   return (
     <div className="filter my-4">
       <h4 className="mb-3">Category</h4>
-      <form>
-        <div>
+      {categoryService.map(({ id, name }) => (
+        <div key={id} className="form-check">
           <input
+            className="form-check-input"
             type="checkbox"
-            id="men"
-            name="men"
-            value="men"
-            onChange={handleChange}
+            id={name}
+            onChange={() => handleChange(name)}
           />
-          <label htmlFor="men"> Men</label>
+          <label className="form-check-label" htmlFor={name}>
+            {name}
+          </label>
         </div>
-        <div>
-          <input
-            type="checkbox"
-            id="women"
-            name="women"
-            value="women"
-            onChange={handleChange}
-          />
-          <label htmlFor="women"> Women</label>
-        </div>
-      </form>
+      ))}
     </div>
   );
 };

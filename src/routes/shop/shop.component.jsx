@@ -4,12 +4,11 @@ import ProductCard from "../../components/product-card/product-card.component";
 import Search from "../../components/search/search.component";
 import SHOP_DATA from "../../service/fakeProductService";
 const Shop = () => {
-  const [products, setProducts] = useState(SHOP_DATA);
-  const [filterInput, setFilterInput] = useState({});
-  console.log(filterInput);
-  const handleSubmit = (e) => {
-    const { name, value } = e.target;
-    setFilterInput({ ...filterInput, [name]: value });
+  const [products, setProducts] = [SHOP_DATA];
+  const categoryNames = ["men", "women"];
+
+  const handleSubmit = (index) => {
+    console.log("hello");
   };
   return (
     <div className="shop">
@@ -19,18 +18,6 @@ const Shop = () => {
           <div className="col-md-3">
             <Search />
             <Filter />
-            <input
-              type="checkbox"
-              name="men"
-              value="men"
-              onChange={handleSubmit}
-            />
-            <input
-              type="checkbox"
-              name="women"
-              value="women"
-              onChange={handleSubmit}
-            />
           </div>
           <div className="col-md-9">
             <div className="row">
