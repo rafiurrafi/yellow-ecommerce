@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Service from "../../service/service";
-const Filter = () => {
+const Filter = ({ onFilter }) => {
   const [categoryFilter, setCategoryFilter] = useState([]);
   const handleChange = (name) => {
-    if (!categoryFilter.includes(name)) categoryFilter.push(name);
-    else categoryFilter.splice(categoryFilter.indexOf(name), 1);
-    console.log(categoryFilter);
+    const filters = [...categoryFilter];
+    if (!filters.includes(name)) filters.push(name);
+    else filters.splice(filters.indexOf(name), 1);
+    onFilter(filters);
+    setCategoryFilter(filters);
   };
   const { categoryService } = Service;
   return (
