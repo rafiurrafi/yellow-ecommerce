@@ -1,12 +1,12 @@
 import ProductCard from "../product-card/product-card.component";
 import PRODUCTS from "../../service/fakeProductService";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const FeaturedProducts = () => {
   const [products, setProducts] = useState(PRODUCTS);
   const [showCat, setShowTag] = useState("men");
-
   const filteredProducts = products.filter(
-    (product) => product.tags[0] === showCat
+    (product) => product.tags === showCat
   );
 
   return (
@@ -16,8 +16,14 @@ const FeaturedProducts = () => {
         <button className="btn me-4" onClick={() => setShowTag("men")}>
           Men
         </button>
-        <button className="btn" onClick={() => setShowTag("women")}>
+        <button className="btn me-4" onClick={() => setShowTag("women")}>
           Women
+        </button>
+        <button className="btn me-4" onClick={() => setShowTag("bags")}>
+          Bags
+        </button>
+        <button className="btn " onClick={() => setShowTag("kids")}>
+          Kids
         </button>
       </div>
       <div className="container my-5">
