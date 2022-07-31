@@ -1,6 +1,8 @@
+import { useState } from "react";
+import CommentForm from "../comment-form/comment-form.component";
 import CommentItem from "../comment-item/comment-item.component";
 
-const comments = [
+const commentMain = [
   {
     id: 1,
     name: "Haseeba",
@@ -21,12 +23,25 @@ const comments = [
   },
 ];
 const Comment = () => {
+  const [comments, setComments] = useState(commentMain);
+  const addComment = (comment) => {
+    const updates = [...comments];
+    updates.push(comment);
+    setComments(updates);
+  };
   return (
     <div>
       <h3>Comment</h3>
-      {comments.map((comment) => (
-        <CommentItem key={comment.id} comment={comment} />
-      ))}
+      <div className="d-md-flex align-items-start">
+        <div>
+          {comments.map((comment) => (
+            <CommentItem key={comment.id} comment={comment} />
+          ))}
+        </div>
+        <div>
+          <CommentForm onAddComment={addComment} />
+        </div>
+      </div>
     </div>
   );
 };
