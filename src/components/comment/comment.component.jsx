@@ -7,7 +7,7 @@ const commentMain = [
     id: 1,
     name: "Haseeba",
     email: "haseeba@yahool.mail",
-    imageUrl: "assets/profile/profile-1.jpg",
+    imageUrl: "/assets/profile/profile-1.jpg",
     message:
       "Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Suspendisse viverra ed viverra. Mauris ullarper euismod vehicula. Phasellus quam nisi, congue id nulla.",
     replies: [
@@ -15,7 +15,7 @@ const commentMain = [
         id: 1,
         name: "Sameeeya",
         email: "sameeya@yahool.mail",
-        imageUrl: "assets/profile/profile-2.jpg",
+        imageUrl: "/assets/profile/profile-2.jpg",
         message:
           "Vestibulum ante ipsum primis aucibus orci luctustrices posuere cubilia Curae Suspendisse viverra ed viverra. Mauris ullarper euismod vehicula. Phasellus quam nisi, congue id nulla.",
       },

@@ -1,9 +1,8 @@
 import ProductCard from "../product-card/product-card.component";
-import PRODUCTS from "../../service/fakeProductService";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { ProductContext } from "../../context/product.context";
 const FeaturedProducts = () => {
-  const [products, setProducts] = useState(PRODUCTS);
+  const { products } = useContext(ProductContext);
   const [showCat, setShowTag] = useState("men");
   const filteredProducts = products.filter(
     (product) => product.tags === showCat

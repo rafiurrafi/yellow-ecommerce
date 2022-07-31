@@ -3,6 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import "./product-details.style.scss";
 const ProductDetails = ({ product }) => {
   const { name, price, description, images } = product;
+  console.log(product);
   return (
     <div className="product-details my-5">
       <div className="container">

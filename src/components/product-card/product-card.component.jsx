@@ -2,14 +2,14 @@ import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "./product-card.style.scss";
 const ProductCard = ({ product }) => {
-  const { name, images, price } = product;
+  const { id, name, images, price } = product;
   return (
     <div className="product-card">
       <img src={images[0]} alt="" />
       <div className="d-flex justify-content-between align-items-start my-3">
         <div>
           <Link
-            to="/products-single"
+            to={`/products/${id}`}
             className="text-dark text-decoration-none"
           >
             <h4>{name}</h4>
