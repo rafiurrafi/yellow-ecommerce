@@ -1,0 +1,17 @@
+.product-details {
+  img {
+    width: 100%;
+  }
+  &-price {
+    span {
+      color: crimson;
+      font-weight: 500;
+    }
+    font-size: 18px;
+  }
+  &-content {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+}

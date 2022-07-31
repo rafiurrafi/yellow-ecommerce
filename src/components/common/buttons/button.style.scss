@@ -1,0 +1,11 @@
+.color-btn {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+
+  &.active {
+    outline: 1px solid red !important;
+  }
+}
