@@ -22,6 +22,9 @@ const removeCartItem = (cartItems, itemToRemove) => {
   );
 };
 
+export const clearCartItem = (cartItems, itemToClear) => {
+  return cartItems.filter((item) => item.id !== itemToClear.id);
+};
 export const CartContext = createContext({
   cartItems: [],
   addItemsToCart: () => {},
@@ -34,10 +37,14 @@ const CartProvider = ({ children }) => {
   const removeItemFromCart = (itemToRemove) => {
     setCartItems(removeCartItem(cartItems, itemToRemove));
   };
+  const clearItemFromCart = (itemToClear) => {
+    setCartItems(clearCartItem(cartItems, itemToClear));
+  };
   const value = {
     cartItems,
     addItemToCart,
     removeItemFromCart,
+    clearItemFromCart,
   };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/cart.context";
 import "./cart.style.scss";
 const Cart = () => {
-  const { cartItems, addItemToCart, removeItemFromCart } =
+  const { cartItems, addItemToCart, removeItemFromCart, clearItemFromCart } =
     useContext(CartContext);
   return (
     <div className="cart-page">
@@ -35,7 +35,12 @@ const Cart = () => {
                   </td>
                   <td>{item.quantity * item.price[1]} </td>
                   <td>
-                    <button className="btn">X</button>
+                    <button
+                      className="btn"
+                      onClick={() => clearItemFromCart(item)}
+                    >
+                      X
+                    </button>
                   </td>
                 </tr>
               ))}
