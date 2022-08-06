@@ -69,9 +69,9 @@ const Header = () => {
             <div className="btn">
               <BsSuitHeartFill />
             </div>
-            <div className="btn">
+            <Link to="/cart" className="btn">
               <GiShoppingCart />
-            </div>
+            </Link>
           </div>
         </div>
       </div>

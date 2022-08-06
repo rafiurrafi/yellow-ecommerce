@@ -1,0 +1,13 @@
+.cart-page {
+  table {
+    td:first-of-type,
+    th:first-of-type {
+      width: 100px;
+      height: 130px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
