@@ -10,6 +10,7 @@ const ProductDetails = ({ product }) => {
         <div className="row gx-5">
           <div className="col-6">
             <img src={images[0]} alt="Product not found" />
+            <img src="https://im.ge/i/FNfuca" alt="Product not found" />
           </div>
           <div className="col-6">
             <h3 className="h3 mb-3">{name}</h3>

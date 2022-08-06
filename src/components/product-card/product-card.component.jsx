@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import { FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cart.context";
 import "./product-card.style.scss";
 const ProductCard = ({ product }) => {
   const { id, name, images, price } = product;
+  const { addItemToCart } = useContext(CartContext);
+  const handleAddCartItem = () => {
+    addItemToCart(product);
+  };
   return (
     <div className="product-card">
       <img src={images[0]} alt="" />
@@ -22,7 +28,10 @@ const ProductCard = ({ product }) => {
           <FiHeart />
         </button>
       </div>
-      <button className="btn btn-outline-primary d-block w-100">
+      <button
+        onClick={handleAddCartItem}
+        className="btn btn-outline-primary d-block w-100"
+      >
         Add to cart
       </button>
     </div>
