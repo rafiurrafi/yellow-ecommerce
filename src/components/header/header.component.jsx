@@ -3,7 +3,10 @@ import * as Fc from "react-icons/fc";
 import { BsFillPersonFill, BsSuitHeartFill } from "react-icons/bs";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/cart.context";
 const Header = () => {
+  const { cartCount } = useContext(CartContext);
   return (
     <div className="header py-4">
       <div className="container">
@@ -69,8 +72,9 @@ const Header = () => {
             <div className="btn">
               <BsSuitHeartFill />
             </div>
-            <Link to="/cart" className="btn">
+            <Link to="/cart" className="btn cart-btn">
               <GiShoppingCart />
+              {cartCount > 0 && <div className="cart-count">{cartCount}</div>}
             </Link>
           </div>
         </div>

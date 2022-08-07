@@ -2,8 +2,13 @@ import { useContext } from "react";
 import { CartContext } from "../../context/cart.context";
 import "./cart.style.scss";
 const Cart = () => {
-  const { cartItems, addItemToCart, removeItemFromCart, clearItemFromCart } =
-    useContext(CartContext);
+  const {
+    cartItems,
+    cartTotal,
+    addItemToCart,
+    removeItemFromCart,
+    clearItemFromCart,
+  } = useContext(CartContext);
   return (
     <div className="cart-page">
       <div className="container py-5">
@@ -53,6 +58,7 @@ const Cart = () => {
                 </tbody>
               </table>
             </div>
+            <div className="text-end me-5 pe-5 fw-bold">{cartTotal}</div>
           </>
         )}
       </div>

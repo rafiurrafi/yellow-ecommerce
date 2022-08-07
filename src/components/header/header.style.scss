@@ -1,0 +1,17 @@
+.header {
+  .cart-btn {
+    position: relative;
+  }
+  .cart-count {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: red;
+    height: 18px;
+    width: 18px;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    padding-top: -5px;
+  }
+}
