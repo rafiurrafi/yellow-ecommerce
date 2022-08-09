@@ -21,7 +21,10 @@ const ProductCard = ({ product }) => {
             <h4>{name}</h4>
           </Link>
           <p>
-            ${price[0]} - <span>${price[1]}</span>
+            ${price[0]} -{" "}
+            <span>
+              <del>${price[1]}</del>
+            </span>
           </p>
         </div>
         <button>

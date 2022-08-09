@@ -33,7 +33,23 @@ export const CartContext = createContext({
   cartCount: 0,
 });
 const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 19,
+      name: "Shirt 10",
+      description: "",
+      price: [40, 16],
+      rating: 1,
+      color: ["red", "black", "blue"],
+      size: { small: "s", medium: "m", large: "l" },
+      images: ["/assets/10.jpg"],
+      tags: "women",
+      categories: [],
+      additionalInfo: "",
+      reviews: [],
+      quantity: 3,
+    },
+  ]);
   const [cartTotal, setCartTotal] = useState(0);
   const [cartCount, setCartCount] = useState(0);
   const addItemToCart = (itemToAdd) => {

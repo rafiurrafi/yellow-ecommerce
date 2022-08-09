@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/cart.context";
+
 const Checkout = () => {
+  const { cartItems, cartTotal } = useContext(CartContext);
   return (
     <div className="checkout">
       <div className="container">
-        <div className="row">
-          <div className="col-sm-7">
+        <div className="row gy-5 gx-4">
+          <div className="col-md-7">
             <h4>Billing Details</h4>
             <form>
               <div className="row">
@@ -90,14 +94,42 @@ const Checkout = () => {
               </div>
             </form>
           </div>
-          <div className="col-sm-5">
+          <div className="col-md-5">
             <h4>Your order</h4>
             <div className="checkout-overview bg-gray">
-              <div className="d-flex">
+              <div
+                className="d-flex justify-content-between"
+                style={{ borderBottom: "1px solid #f2f2f2" }}
+              >
                 <p>Product</p>
                 <p>Price</p>
               </div>
+              {cartItems.map((item) => (
+                <div className="d-flex justify-content-between my-2">
+                  <p>
+                    {item.name}x{item.quantity}
+                  </p>
+                  <p>{item.quantity * item.price[1]}</p>
+                </div>
+              ))}
+              <div
+                className="d-flex justify-content-between py-3"
+                style={{
+                  borderBottom: "1px solid #f2f2f2",
+                  borderTop: "1px solid #f2f2f2",
+                }}
+              >
+                <p className="mb-0">Shipping</p>
+                <p className="mb-0">Free shipping</p>
+              </div>
+              <div className="d-flex justify-content-between my-2">
+                <p className="fw-bold">Total</p>
+                <p className="text-primary">{cartTotal}</p>
+              </div>
             </div>
+            <button className="btn btn-primary d-block w-100 my-4">
+              Place Order
+            </button>
           </div>
         </div>
       </div>
