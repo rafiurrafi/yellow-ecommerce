@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Authentication from "./routes/authentication/authentication.component";
 import Cart from "./routes/cart/cart.component";
 import Checkout from "./routes/checkout/checkout.component";
 import Home from "./routes/home/home.component";
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="shop" element={<Shop />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
+        <Route path="authentication" element={<Authentication />} />
         <Route path="products/:productId" element={<ProductSingle />} />
       </Route>
     </Routes>
