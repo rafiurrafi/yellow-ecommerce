@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Authentication from "./routes/authentication/authentication.component";
 import Cart from "./routes/cart/cart.component";
 import Checkout from "./routes/checkout/checkout.component";
+import Contact from "./routes/contact/contact.component";
 import Home from "./routes/home/home.component";
 import Layout from "./routes/layout/layout.component";
 import ProductSingle from "./routes/product-single/product-single.component";
@@ -14,6 +15,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="authentication" element={<Authentication />} />
         <Route path="products/:productId" element={<ProductSingle />} />

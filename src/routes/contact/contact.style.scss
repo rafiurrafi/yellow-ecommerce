@@ -1,0 +1,17 @@
+.contact-icon {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid #333;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+.contact-icon-container {
+  &:hover {
+    .contact-icon {
+      background-color: #333;
+      svg {
+        color: white;
+      }
+    }
+  }
+}
