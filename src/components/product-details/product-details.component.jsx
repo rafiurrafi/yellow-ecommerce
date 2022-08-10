@@ -3,8 +3,9 @@ import { FaHeart } from "react-icons/fa";
 import "./product-details.style.scss";
 import { useEffect, useState } from "react";
 const ProductDetails = ({ product }) => {
-  const { name, price, description, images, colors } = product;
+  const { name, price, description, images, colors, sizes } = product;
   const [selectedColor, setSelectedColor] = useState("red");
+  const [selectedSize, setSelectedSize] = useState("s");
   const [selectedImg, setSelectedImg] = useState(images[0]);
   const handleSelectColor = (color) => {
     setSelectedColor(color);
@@ -20,7 +21,6 @@ const ProductDetails = ({ product }) => {
         <div className="row gx-5">
           <div className="col-6">
             <img src={selectedImg} alt="Product not found" />
-            <img src="https://im.ge/i/FNfuca" alt="Product not found" />
           </div>
           <div className="col-6">
             <h3 className="h3 mb-3">{name}</h3>
@@ -46,17 +46,20 @@ const ProductDetails = ({ product }) => {
               </div>
               <div className="details-size ms-5">
                 <h4>Size</h4>
-                <button className="me-3 d-inline-block">S</button>
-                <button className="me-3 d-inline-block">L</button>
-                <button className="me-3 d-inline-block">XL</button>
+                {sizes.map((size) => (
+                  <button
+                    className={`${
+                      selectedSize === size ? "active" : ""
+                    } me-2 d-inline-block`}
+                    key={size}
+                    onClick={() => setSelectedSize(size)}
+                  >
+                    {size.toUpperCase()}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="d-flex mt-4 align-items-center">
-              <div>
-                <span>-</span>
-                <span>0</span>
-                <span>+</span>
-              </div>
               <div className="mx-3">
                 <button className="btn btn-primary">Add to cart</button>
               </div>

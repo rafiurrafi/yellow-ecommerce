@@ -14,4 +14,14 @@
     margin-bottom: 1rem;
     border-bottom: 1px solid #f1f1f1;
   }
+  .details-size {
+    button {
+      background-color: #eee;
+      border: none;
+      width: 25px;
+      &.active {
+        background-color: tomato;
+      }
+    }
+  }
 }

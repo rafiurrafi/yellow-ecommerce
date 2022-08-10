@@ -3,9 +3,9 @@
   width: 15px;
   border-radius: 50%;
   outline: 1px solid transparent;
-  outline-offset: 3px;
+  outline-offset: 1px;
 
   &.active {
-    outline: 1px solid red !important;
+    outline: 1px solid black !important;
   }
 }
