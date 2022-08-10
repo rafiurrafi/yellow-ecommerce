@@ -2,6 +2,13 @@ import { ColorButton } from "../common/buttons/button.component";
 import { FaHeart } from "react-icons/fa";
 import "./product-details.style.scss";
 import { useEffect, useState } from "react";
+import {
+  FaFacebook,
+  FaDribbble,
+  FaPinterest,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 const ProductDetails = ({ product }) => {
   const { name, price, description, images, colors, sizes } = product;
   const [selectedColor, setSelectedColor] = useState("red");
@@ -18,11 +25,11 @@ const ProductDetails = ({ product }) => {
   return (
     <div className="product-details my-5">
       <div className="container">
-        <div className="row gx-5">
-          <div className="col-6">
+        <div className="row g-5">
+          <div className="col-md-6">
             <img src={selectedImg} alt="Product not found" />
           </div>
-          <div className="col-6">
+          <div className="col-md-6">
             <h3 className="h3 mb-3">{name}</h3>
             <p className="product-details-price">
               <span>${price[0]}</span>{" "}
@@ -59,13 +66,32 @@ const ProductDetails = ({ product }) => {
                 ))}
               </div>
             </div>
-            <div className="d-flex mt-4 align-items-center">
+            <div className="d-flex mt-4 align-items-center mb-4">
               <div className="mx-3">
                 <button className="btn btn-primary">Add to cart</button>
               </div>
               <div>
                 <FaHeart />
               </div>
+            </div>
+            <p>Categories : fashion, men</p>
+            <p>Tags : fashion, men, jacket, full sleeve</p>
+            <div className="product-details-socials d-flex justify-content-between">
+              <a href="">
+                <FaFacebook />
+              </a>
+              <a href="">
+                <FaDribbble />
+              </a>
+              <a href="">
+                <FaPinterest />
+              </a>
+              <a href="">
+                <FaTwitter />
+              </a>
+              <a href="">
+                <FaLinkedinIn />
+              </a>
             </div>
           </div>
         </div>

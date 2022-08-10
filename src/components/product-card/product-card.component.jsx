@@ -22,11 +22,11 @@ const ProductCard = ({ product }) => {
           >
             <h4>{name}</h4>
           </Link>
-          <p>
+          <p className="price">
             ${price[0]} -{" "}
-            <span>
+            <small>
               <del>${price[1]}</del>
-            </span>
+            </small>
           </p>
         </div>
         <button>
