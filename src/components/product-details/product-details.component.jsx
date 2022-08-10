@@ -1,15 +1,25 @@
 import { ColorButton } from "../common/buttons/button.component";
 import { FaHeart } from "react-icons/fa";
 import "./product-details.style.scss";
+import { useEffect, useState } from "react";
 const ProductDetails = ({ product }) => {
-  const { name, price, description, images } = product;
-  console.log(product);
+  const { name, price, description, images, colors } = product;
+  const [selectedColor, setSelectedColor] = useState("red");
+  const [selectedImg, setSelectedImg] = useState(images[0]);
+  const handleSelectColor = (color) => {
+    setSelectedColor(color);
+  };
+  useEffect(() => {
+    const index = colors.indexOf(selectedColor);
+    setSelectedImg(images[index]);
+  }, [selectedColor]);
+  console.log(selectedImg);
   return (
     <div className="product-details my-5">
       <div className="container">
         <div className="row gx-5">
           <div className="col-6">
-            <img src={images[0]} alt="Product not found" />
+            <img src={selectedImg} alt="Product not found" />
             <img src="https://im.ge/i/FNfuca" alt="Product not found" />
           </div>
           <div className="col-6">
@@ -25,9 +35,14 @@ const ProductDetails = ({ product }) => {
             <div className="d-flex">
               <div className="details-color">
                 <h4>Color</h4>
-                <ColorButton color="black" />
-                <span className="me-3">G</span>
-                <span className="me-3">B</span>
+                {colors.map((color) => (
+                  <ColorButton
+                    color={color}
+                    key={color}
+                    selectedColor={selectedColor}
+                    onSelectColor={handleSelectColor}
+                  />
+                ))}
               </div>
               <div className="details-size ms-5">
                 <h4>Size</h4>

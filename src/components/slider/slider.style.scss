@@ -1,11 +1,30 @@
+.sliders {
+  height: 80vh;
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .slick-arrow.slick-prev {
+    left: 5%;
+  }
+  .slick-arrow.slick-next {
+    right: 5%;
+  }
+  // .slick-dots {
+  //   display: none !important;
+  // }
+}
 .slider {
   height: 80vh;
   position: relative;
-  display: none;
-  &.active {
-    display: block;
-  }
+
   img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;

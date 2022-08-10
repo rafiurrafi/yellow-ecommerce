@@ -11,7 +11,9 @@ const ProductCard = ({ product }) => {
   };
   return (
     <div className="product-card">
-      <img src={images[0]} alt="" />
+      <Link to={`/products/${id}`} className="text-dark text-decoration-none">
+        <img src={images[0]} alt="" />
+      </Link>
       <div className="d-flex justify-content-between align-items-start my-3">
         <div>
           <Link
