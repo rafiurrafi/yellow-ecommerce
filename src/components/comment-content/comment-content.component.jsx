@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import { GiFlatStar } from "react-icons/gi";
 import image from "../../assets/profile-p.jpg";
-const CommentContent = ({ name, imageUrl, message }) => {
+import { CommentContext } from "../../contexts/comment.context";
+const CommentContent = ({ comment }) => {
+  const { parentId, imageUrl, name, message } = comment;
+
   return (
     <div className="d-flex mb-4">
       <div className="comment-img me-4">
@@ -8,8 +13,23 @@ const CommentContent = ({ name, imageUrl, message }) => {
       <div style={{ flex: 1 }}>
         <div className="d-flex justify-content-between align-items-center">
           <h3>{name}</h3>
-          <div className="me-auto ms-4">start</div>
-          <button className="btn btn-outline-primary">Reply</button>
+          <div className="me-4 ms-4">
+            <span className="me-1">
+              <GiFlatStar />
+            </span>
+            <span className="me-1">
+              <GiFlatStar />
+            </span>
+            <span className="me-1">
+              <GiFlatStar />
+            </span>
+            <span className="me-1">
+              <GiFlatStar />
+            </span>
+            <span>
+              <GiFlatStar />
+            </span>
+          </div>
         </div>
         <div>{message}</div>
       </div>

@@ -10,9 +10,9 @@ const Header = () => {
   return (
     <div className="header py-4">
       <div className="container">
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-md-flex justify-content-between align-items-center">
           <div className="logo h2">Logo</div>
-          <ul className="list-unstyled d-flex mb-0">
+          <ul className="list-unstyled d-md-flex mb-0">
             <li className="mx-3">
               <Link
                 to="/"
@@ -31,14 +31,6 @@ const Header = () => {
             </li>
             <li className="mx-3">
               <Link
-                to="/collection"
-                className="text-decoration-none text-dark fw-semi-bold"
-              >
-                Collection
-              </Link>
-            </li>
-            <li className="mx-3">
-              <Link
                 to="/pages"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
@@ -47,7 +39,7 @@ const Header = () => {
             </li>
             <li className="mx-3">
               <Link
-                to="/blog"
+                to="/"
                 className="text-decoration-none text-dark fw-semi-bold"
               >
                 Blog
@@ -79,6 +71,7 @@ const Header = () => {
               )}
             </Link>
           </div>
+          <button className="header-cross">C</button>
         </div>
       </div>
     </div>

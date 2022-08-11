@@ -21,7 +21,6 @@ const ProductDetails = ({ product }) => {
     const index = colors.indexOf(selectedColor);
     setSelectedImg(images[index]);
   }, [selectedColor]);
-  console.log(selectedImg);
   return (
     <div className="product-details my-5">
       <div className="container">
@@ -67,7 +66,7 @@ const ProductDetails = ({ product }) => {
               </div>
             </div>
             <div className="d-flex mt-4 align-items-center mb-4">
-              <div className="mx-3">
+              <div className="me-3">
                 <button className="btn btn-primary">Add to cart</button>
               </div>
               <div>

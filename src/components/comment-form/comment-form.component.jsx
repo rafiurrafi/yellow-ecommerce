@@ -1,13 +1,15 @@
-import { useState } from "react";
-
+import { useContext, useState } from "react";
+import { CommentContext } from "../../contexts/comment.context";
+import { v4 as uuidv4 } from "uuid";
 const defaultFormField = {
   name: "",
   email: "",
   message: "",
 };
 
-const CommentForm = ({ onAddComment }) => {
+const CommentForm = () => {
   const [formFields, setFormFields] = useState(defaultFormField);
+  const { addComment } = useContext(CommentContext);
   const { name, email, message } = formFields;
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,7 +17,7 @@ const CommentForm = ({ onAddComment }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddComment({ ...formFields, id: Math.random() * 100, replies: [] });
+    addComment({ ...formFields, id: uuidv4() });
   };
   return (
     <div>
