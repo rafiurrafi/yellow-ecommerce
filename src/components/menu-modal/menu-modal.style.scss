@@ -1,13 +1,74 @@
 .menu-modal {
   height: 100vh;
   width: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 3;
-  overflow: hidden;
-  background-color: red;
+  //   overflow: hidden;
+  overflow-y: scroll;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   &.active {
     width: 25rem;
   }
+}
+.menu-input {
+  height: 3rem;
+  background-color: #e6e6e6;
+  position: relative;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+  }
+}
+.menu-model-content {
+  position: relative;
+}
+.menu-cross {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  //   transform: translateX(-3rem);
+  height: 3rem;
+  width: 3rem;
+  background-color: #343538;
+  z-index: 41;
+  color: white;
+  cursor: pointer;
+}
+.modal-menus {
+  a:hover {
+    color: tomato;
+  }
+}
+.modal-socials a:hover {
+  color: #a749ff;
 }

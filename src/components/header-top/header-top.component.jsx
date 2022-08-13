@@ -1,7 +1,7 @@
 import "./header-top.style.scss";
 const HeaderTop = () => {
   return (
-    <div className="header-top">
+    <div className="header-top d-none d-md-block">
       <div className="container">
         <div className="d-md-flex justify-content-between align-items-center">
           <div className="d-flex">
