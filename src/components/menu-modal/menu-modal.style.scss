@@ -1,0 +1,13 @@
+.menu-modal {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  overflow: hidden;
+  background-color: red;
+  &.active {
+    width: 25rem;
+  }
+}

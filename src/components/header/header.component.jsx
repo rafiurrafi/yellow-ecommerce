@@ -7,10 +7,11 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart.context";
 import { FaTimes, FaBars } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ onOpenMenu }) => {
   const { cartItems } = useContext(CartContext);
   const [timesIcon, setTimesIcon] = useState(false);
   const handleMenuOpen = () => {
+    onOpenMenu(timesIcon);
     setTimesIcon(!timesIcon);
   };
   return (
