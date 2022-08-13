@@ -6,14 +6,11 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart.context";
 import { FaTimes, FaBars } from "react-icons/fa";
+import { HeaderContext } from "../../context/header-menu.context";
 
-const Header = ({ onOpenMenu }) => {
+const Header = () => {
+  const { isMenuOpen, setIsMenuOpen } = useContext(HeaderContext);
   const { cartItems } = useContext(CartContext);
-  const [timesIcon, setTimesIcon] = useState(false);
-  const handleMenuOpen = () => {
-    onOpenMenu(timesIcon);
-    setTimesIcon(!timesIcon);
-  };
   return (
     <div className="header py-4">
       <div className="container">
@@ -79,10 +76,10 @@ const Header = ({ onOpenMenu }) => {
             </Link>
           </div>
           <button
-            onClick={handleMenuOpen}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="header-cross d-block d-md-none"
           >
-            {timesIcon ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </div>

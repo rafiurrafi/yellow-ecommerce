@@ -6,18 +6,14 @@ import { Outlet } from "react-router-dom";
 import MenuModal from "../../components/menu-modal/menu-modal.component";
 import { useState } from "react";
 const Layout = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const handleOpenMenu = (openMenu) => {
-    setOpenMenu(!openMenu);
-  };
   return (
     <div className="layout">
       <HeaderTop />
-      <Header onOpenMenu={handleOpenMenu} />
+      <Header />
       <Outlet />
       <Subscription />
       <Footer />
-      <MenuModal isActive={openMenu} />
+      <MenuModal />
     </div>
   );
 };
