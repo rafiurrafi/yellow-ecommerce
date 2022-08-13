@@ -18,8 +18,12 @@
     position: relative;
   }
   .header-cross {
-    position: absolute;
-    right: 1rem;
-    top: 0.5rem;
+    border: none;
+    background-color: transparent;
+  }
+}
+@media (max-width: 768px) {
+  .header-cross {
+    display: block !important;
   }
 }

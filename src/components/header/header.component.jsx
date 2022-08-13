@@ -3,16 +3,22 @@ import * as Fc from "react-icons/fc";
 import { BsFillPersonFill, BsSuitHeartFill } from "react-icons/bs";
 import { GiShoppingCart } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/cart.context";
+import { FaTimes, FaBars } from "react-icons/fa";
+
 const Header = () => {
   const { cartItems } = useContext(CartContext);
+  const [timesIcon, setTimesIcon] = useState(false);
+  const handleMenuOpen = () => {
+    setTimesIcon(!timesIcon);
+  };
   return (
     <div className="header py-4">
       <div className="container">
-        <div className="d-md-flex justify-content-between align-items-center">
+        <div className="d-flex justify-content-between align-items-center">
           <div className="logo h2">Logo</div>
-          <ul className="list-unstyled d-md-flex mb-0">
+          <ul className="list-unstyled d-none d-md-flex mb-0">
             <li className="mx-3">
               <Link
                 to="/"
@@ -71,7 +77,12 @@ const Header = () => {
               )}
             </Link>
           </div>
-          <button className="header-cross">C</button>
+          <button
+            onClick={handleMenuOpen}
+            className="header-cross d-block d-md-none"
+          >
+            {timesIcon ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
       </div>
     </div>
