@@ -76,11 +76,11 @@ const MenuModal = () => {
             <option value="">BDT</option>
           </select>
         </div>
-        <div className="py-5 px-4">
-          <div className="mb-2">
+        <div className="py-5 px-4 ">
+          <div className="mb-2 modal-info">
             <FaPhone /> <span className="ms-5"> (1245) 2456 012</span>
           </div>
-          <div className="mb-2">
+          <div className="mb-2 modal-info">
             <FaEnvelope /> <span className="ms-5">info@domain.com</span>
           </div>
           <div className="modal-socials">
