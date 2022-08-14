@@ -2,6 +2,7 @@ import "./slider.style.scss";
 import SLIDER_ITEMS from "../../service/slider-service.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 const HeroSlider = () => {
   var settings = {
     dots: false,
@@ -10,6 +11,8 @@ const HeroSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    nextArrow: <BsArrowRightCircle />,
+    prevArrow: <BsArrowLeftCircle />,
   };
   return (
     <div className="sliders">

@@ -1,3 +1,4 @@
+import "./footer.style.scss";
 const Footer = () => {
   return (
     <div className="footer">
@@ -14,28 +15,28 @@ const Footer = () => {
             <h4 className="text-uppercase">About Us</h4>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               About us
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Strore Location
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Contact
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Order tracking
@@ -45,28 +46,28 @@ const Footer = () => {
             <h4 className="text-uppercase">Useful Links</h4>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Returns
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Support Policy
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               Size Guides
             </a>
             <a
               href="#"
-              className="d-block text-decoration-none text-dark"
+              className="d-block text-decoration-none text-dark mb-2"
               style={{ fontWeight: 500 }}
             >
               FAQs
