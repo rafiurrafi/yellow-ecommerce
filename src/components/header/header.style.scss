@@ -23,6 +23,10 @@
   }
 }
 @media (max-width: 768px) {
+  .header.py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
   .header-cross {
     display: block !important;
   }
