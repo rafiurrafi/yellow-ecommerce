@@ -38,13 +38,13 @@ const MenuModal = () => {
           </Link>
           <Link
             className="d-block text-decoration-none text-dark fw-bold my-4"
-            to="/"
+            to="/shop"
           >
             Shop
           </Link>
           <Link
             className="d-block text-decoration-none text-dark fw-bold my-4"
-            to="/"
+            to="/pages"
           >
             Pages
           </Link>
@@ -56,7 +56,7 @@ const MenuModal = () => {
           </Link>
           <Link
             className="d-block text-decoration-none text-dark fw-bold my-4"
-            to="/"
+            to="/contact-us"
           >
             Contact Us
           </Link>

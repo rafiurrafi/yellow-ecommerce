@@ -15,3 +15,12 @@
     }
   }
 }
+// .contact-social {
+//   transform: translateX(-1rem);
+// }
+.contact-social-link {
+  color: #444;
+  &:hover {
+    color: #a749ff;
+  }
+}
