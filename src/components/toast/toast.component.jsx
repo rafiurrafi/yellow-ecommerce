@@ -1,5 +1,5 @@
 import "./toast.style.scss";
-const Toast = ({ children, active: isActive }) => {
+const Toast = ({ children, isActive }) => {
   return (
     <div
       className={`${

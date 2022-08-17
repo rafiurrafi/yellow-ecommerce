@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { BsGlobe2 } from "react-icons/bs";
 import {
@@ -11,6 +12,14 @@ import { HiLocationMarker } from "react-icons/hi";
 import Toast from "../../components/toast/toast.component";
 import "./contact.style.scss";
 const Contact = () => {
+  const [toastActive, setToastActive] = useState(false);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setToastActive(true);
+    setTimeout(() => {
+      setToastActive(false);
+    }, 2000);
+  };
   return (
     <div className="contact">
       <div className="container">
@@ -68,49 +77,51 @@ const Contact = () => {
           <div className="col-md-8">
             <div className="bg-light p-5">
               <h4 className="mb-4">Get In Touch</h4>{" "}
-              <div className="row  gy-4">
-                <div className="col-sm-6">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Your Name"
-                  />
+              <form onSubmit={handleSubmit}>
+                <div className="row  gy-4">
+                  <div className="col-sm-6">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div className="col-sm-6">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Your Email"
+                    />
+                  </div>
                 </div>
-                <div className="col-sm-6">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Your Email"
-                  />
+                <div className="row my-4">
+                  <div className="col">
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Your Subject"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="row my-4">
-                <div className="col">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Your Subject"
-                  />
+                <div className="row">
+                  <div className="col">
+                    <textarea
+                      name=""
+                      className="form-control"
+                      id=""
+                      placeholder="Your message"
+                      cols="30"
+                      rows="5"
+                    ></textarea>
+                  </div>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <textarea
-                    name=""
-                    className="form-control"
-                    id=""
-                    placeholder="Your message"
-                    cols="30"
-                    rows="5"
-                  ></textarea>
-                </div>
-              </div>
-              <button className="btn btn-outline-secondary mt-4">Send</button>
+                <button className="btn btn-outline-secondary mt-4">Send</button>
+              </form>{" "}
             </div>
           </div>
         </div>
       </div>
-      <Toast>Thanks for contacting us 😊</Toast>
+      <Toast isActive={toastActive}>Thanks for contacting us 😊</Toast>
     </div>
   );
 };
