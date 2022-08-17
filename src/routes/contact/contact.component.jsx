@@ -11,14 +11,27 @@ import {
 import { HiLocationMarker } from "react-icons/hi";
 import Toast from "../../components/toast/toast.component";
 import "./contact.style.scss";
+const defaultFormField = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 const Contact = () => {
   const [toastActive, setToastActive] = useState(false);
+  const [formFields, setFormFields] = useState(defaultFormField);
+  const { name, email, subject, message } = formFields;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormFields({ ...formFields, [name]: value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setToastActive(true);
     setTimeout(() => {
       setToastActive(false);
     }, 2000);
+    setFormFields(defaultFormField);
   };
   return (
     <div className="contact">
@@ -84,6 +97,9 @@ const Contact = () => {
                       type="text"
                       className="form-control"
                       placeholder="Your Name"
+                      value={name}
+                      name="name"
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="col-sm-6">
@@ -91,6 +107,9 @@ const Contact = () => {
                       type="text"
                       className="form-control"
                       placeholder="Your Email"
+                      value={email}
+                      name="email"
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -100,13 +119,18 @@ const Contact = () => {
                       type="text"
                       className="form-control"
                       placeholder="Your Subject"
+                      value={subject}
+                      name="subject"
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col">
                     <textarea
-                      name=""
+                      name="message"
+                      value={message}
+                      onChange={handleChange}
                       className="form-control"
                       id=""
                       placeholder="Your message"
